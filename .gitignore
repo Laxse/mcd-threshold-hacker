@@ -1,0 +1,28 @@
+# ===== 真实凭证与个人信息：绝不入库 =====
+.env
+*.env
+mcp-config.json
+mcp.json
+token*
+
+# ===== Python =====
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# ===== 本地探测/调试产物 =====
+/tmp/
+*.log
+tools_list*.json
+real_promotions_raw.txt
+tools_list_raw.txt
+
+# ===== 编辑器/系统 =====
+.vscode/
+.idea/
+.DS_Store
+
+# ===== 用户偏好（含个人口味/预算，按官方要求不入库） =====
+user_profile.json
