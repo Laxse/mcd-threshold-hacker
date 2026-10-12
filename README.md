@@ -2,10 +2,6 @@
 
 > 麦当劳企业团餐凑单最优解引擎 · 基于 MCP 未公开接口 query-promotions 实时解析满减阶梯，自动求解跨助餐服务的最优折扣门槛与「再买多少降几折」的凑单差额。
 
-> 麦当劳程序员节创意开发大赛参赛作品（金拱门 × WorkBuddy）
-> **不评审代码，只认 Star。** 本项目定位差异化蓝海：**企业团餐促销规则叠加优化**，
-> 当前榜单 80+ 项目中几乎无人系统利用 `query-promotions` 这一隐藏工具。
-
 ---
 
 ## 一句话定位
@@ -15,14 +11,6 @@
 把麦当劳企业团餐的满折阶梯（3 个助餐服务 × 4 档门槛）解析成可计算结构，
 在给定餐品小计下给出**实付最低方案**，并直接告诉你「再买多少、折扣能降几折」。
 算法层 21 个单测全绿，演示无需 Token 即可跑通。
-
----
-
-## 为什么是蓝海
-
-- 榜单红海：省钱助手 / 卡路里 / 预算规划 / 活动日历播报 —— 40+ 项目扎堆。
-- 本项目的抓手：`query-promotions` 是**官方 README 未收录的隐藏工具**，仅企业团餐（beType=6）场景返回满减/满折规则原始数据。绝大多数参赛者根本调不到它。
-- 真实洞察：麦当劳 MCP **服务端无状态**，不记用户偏好 ——「记住团队口味/预算」本身就是差异化资产。
 
 ---
 
@@ -130,10 +118,10 @@ print(recs[0].as_dict())   # 最优方案 + 凑单差额，纯函数、零网络
 
 ```
 mcd-threshold-hacker/
-├── SKILL.md                       # WorkBuddy 技能定义（核心交付物）
+├── SKILL.md                       # WorkBuddy 技能定义
 ├── README.md                      # 本文件
-├── workbuddy.md                   # WorkBuddy 对话上下文导出（参赛必备）
-├── CONTEST_DECLARATION.md         # 参赛声明（原样复制）
+├── workbuddy.md                   # WorkBuddy 技能对话上下文导出
+├── CONTEST_DECLARATION.md         # 赛事声明文件（按主办方要求保留）
 ├── mcp-config.example.json        # MCP 接入示例（占位符，不含真实 Token）
 ├── scripts/
 │   ├── promotion_ladder.py        # 算法核心：规则解析 + 最优求解 + 凑单提示
@@ -142,8 +130,8 @@ mcd-threshold-hacker/
 │   └── tests/
 │       └── test_promotion_ladder.py   # 21 个单测，基于真实规则数据
 └── references/
-    ├── MCP_TOOLS.md               # 35 个工具参考（实测名，含隐藏工具勘误）
-    └── USER_PROFILE.md            # 用户偏好持久化方案（差异化核心）
+    ├── MCP_TOOLS.md               # 35 个工具参考（实测名，含未收录工具勘误）
+    └── USER_PROFILE.md            # 用户偏好持久化方案（因 MCP 服务端无状态）
 ```
 
 ---
@@ -167,4 +155,4 @@ mcd-threshold-hacker/
 
 ---
 
-⭐ 如果这个项目帮你省了团餐钱，欢迎点个 Star —— 这也是比赛排名的唯一依据。
+⭐ 如果这个项目帮你省了团餐钱，欢迎点个 Star。
