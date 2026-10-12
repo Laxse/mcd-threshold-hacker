@@ -1,4 +1,4 @@
-# mcd-threshold-hacker · 麦当劳团餐凑单最优解引擎
+# mcd-threshold-hacker · 大家的麦-麦当劳企业团餐凑单最优解引擎
 
 > 麦当劳企业团餐凑单最优解引擎 · 基于 MCP 未公开接口 query-promotions 实时解析满减阶梯，自动求解跨助餐服务的最优折扣门槛与「再买多少降几折」的凑单差额。
 
